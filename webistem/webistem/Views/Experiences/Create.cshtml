@@ -1,0 +1,54 @@
+﻿@model webistem.Models.Experience
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Experience</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Baslık" class="control-label"></label>
+                <input asp-for="Baslık" class="form-control" />
+                <span asp-validation-for="Baslık" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Baslık2" class="control-label"></label>
+                <input asp-for="Baslık2" class="form-control" />
+                <span asp-validation-for="Baslık2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KısaAcıklama" class="control-label"></label>
+                <input asp-for="KısaAcıklama" class="form-control" />
+                <span asp-validation-for="KısaAcıklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Açıklama" class="control-label"></label>
+                <input asp-for="Açıklama" class="form-control" />
+                <span asp-validation-for="Açıklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExperienceDateTime" class="control-label"></label>
+                <input asp-for="ExperienceDateTime" class="form-control" />
+                <span asp-validation-for="ExperienceDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

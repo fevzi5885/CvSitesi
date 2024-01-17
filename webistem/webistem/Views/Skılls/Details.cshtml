@@ -1,0 +1,37 @@
+﻿@model webistem.Models.Skılls
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Skılls</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Baslık)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Baslık)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KısaAcıklama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KısaAcıklama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.İsAkısı)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.İsAkısı)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SkıllsId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

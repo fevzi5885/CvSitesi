@@ -1,0 +1,50 @@
+﻿@model webistem.Models.Education
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Education</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EducationId" />
+            <div class="form-group">
+                <label asp-for="UniversiteAdı" class="control-label"></label>
+                <input asp-for="UniversiteAdı" class="form-control" />
+                <span asp-validation-for="UniversiteAdı" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BolumunAdi" class="control-label"></label>
+                <input asp-for="BolumunAdi" class="form-control" />
+                <span asp-validation-for="BolumunAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ortalama" class="control-label"></label>
+                <input asp-for="Ortalama" class="form-control" />
+                <span asp-validation-for="Ortalama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EgtimTarihi" class="control-label"></label>
+                <input asp-for="EgtimTarihi" class="form-control" />
+                <span asp-validation-for="EgtimTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

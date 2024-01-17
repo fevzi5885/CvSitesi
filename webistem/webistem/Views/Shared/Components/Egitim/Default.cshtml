@@ -1,0 +1,21 @@
+﻿@model List<webistem.Models.Education>
+
+@foreach(var item in Model)
+{
+<section class="resume-section" id="education">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Eğitim</h2>
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">@item.UniversiteAdı</h3>
+                <div class="subheading mb-3">@item.BolumunAdi</div>
+                <div>Computer Science - Web Development Track</div>
+                <p>@item.Ortalama</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">@item.EgtimTarihi</span></div>
+        </div>
+        
+    </div>
+</section>
+<hr class="m-0" />
+}

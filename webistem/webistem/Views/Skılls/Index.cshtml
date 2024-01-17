@@ -1,0 +1,48 @@
+﻿@model IEnumerable<webistem.Models.Skılls>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Baslık)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KısaAcıklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.İsAkısı)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baslık)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KısaAcıklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.İsAkısı)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SkıllsId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SkıllsId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SkıllsId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

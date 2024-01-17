@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!-- Page Content-->
+<div class="container-fluid p-0">
+    <!-- About-->
+    @await Component.InvokeAsync("Hakkımızda")
+    <!-- Experience-->
+    @await Component.InvokeAsync("Deneyimler")
+    <!-- Education-->
+   @await Component.InvokeAsync("Egitim")
+    <!-- Skills-->
+    @await Component.InvokeAsync("Yetenekler")
+    <!-- Interests-->
+    @await Component.InvokeAsync("IlgiAlanları")
+    <!-- Awards-->
+    @await Component.InvokeAsync("Odüller")
+</div>
+
